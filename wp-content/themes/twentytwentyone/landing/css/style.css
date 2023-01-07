@@ -1,0 +1,1508 @@
+@font-face {
+    font-family: Kid Games;
+    font-display: auto;
+    src: url("../fonts/Kid Games.ttf") format("opentype")
+}
+
+@font-face {
+    font-family: Averta Std CY;
+    font-display: auto;
+    src: url(../fonts/AvertaStdCY-Regular.otf) format("opentype")
+}
+
+@font-face {
+    font-family: Averta Std CY;
+    font-display: auto;
+    font-weight: 700;
+    src: url(../fonts/AvertaStdCY-Bold.otf) format("opentype")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html {
+    font-size: 62.5%;
+    color: #fff
+}
+
+body {
+    overflow-x: hidden;
+    font-family: Averta Std CY
+}
+
+img {
+    display: block;
+    max-width: 100%
+}
+
+a {
+    text-decoration: none
+}
+
+ul {
+    list-style-type: none
+}
+
+p {
+    font-family: Averta Std CY
+}
+
+button:focus {
+    outline: none
+}
+
+#preloader {
+    background-color: #eaecfa;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    display: none
+}
+
+#preloader .loader {
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Kid Games, sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #ce4233;
+    letter-spacing: .3em;
+    font-size: 3.5rem
+}
+
+#preloader .loader::before,
+#preloader .loader::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #ce4233;
+    position: absolute;
+    animation: load 1s infinite alternate ease-in-out
+}
+
+#preloader .loader::before {
+    top: 0
+}
+
+#preloader .loader::after {
+    bottom: 0
+}
+
+@keyframes load {
+    0% {
+        left: 0;
+        height: 30px;
+        width: 15px
+    }
+
+    50% {
+        height: 8px;
+        width: 40px
+    }
+
+    100% {
+        left: 300px;
+        height: 30px;
+        width: 15px
+    }
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-family: Kid Games, Roboto Slab, serif
+}
+
+.btn-with-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.btn-header {
+    width: 36rem;
+    height: 17.698rem;
+    color: #fff;
+    font-size: 2rem;
+    background-image: url(images/btn_header_bg.png);
+    margin: 0 auto
+}
+
+body {
+    font-family: Kid Games, Roboto Slab, serif;
+    font-size: 1.6rem;
+    line-height: 1;
+    background-color: #000
+}
+
+.wrapper {
+    width: 100vw
+}
+
+header {
+    padding: 0 2rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%)
+}
+
+header .logo {
+    margin-right: 10.5rem;
+    margin-top: 1.2rem
+}
+
+header .mobile-menu-icon {
+    display: none
+}
+
+header .header-menu {
+    display: flex;
+    margin-top: 4.1rem
+}
+
+header .header-menu .header-menu-link {
+    color: #fff;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    padding: 0 2rem;
+    line-height: 1.6rem
+}
+
+header .header-menu .btn-connect {
+    background-image: url(images/connect_btn_bg.png);
+    width: 18rem;
+    height: 7.467rem;
+    color: #fff;
+    font-size: 1.3rem;
+    transform: translateY(-3.1rem);
+    margin-left: 2.4rem
+}
+
+.banner {
+    position: relative
+}
+
+.banner .banner-mobile {
+    display: none;
+    pointer-events: none
+}
+
+.banner .banner-pc {
+    display: block;
+    pointer-events: none
+}
+
+.banner img {
+    width: 100%;
+    height: auto
+}
+
+.banner .action-group {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 12%;
+    display: flex
+}
+
+.banner .action-group .btn {
+    width: 24rem;
+    height: 15.31rem;
+    font-size: 1.8rem;
+    color: #ffc700
+}
+
+.banner .action-group .btn-buy-kwt {
+    background-image: url(images/buy_kws.png);
+    margin-right: 6rem
+}
+
+.banner .action-group .btn-buy-weapon {
+    background-image: url(images/buy_weapon.png)
+}
+
+.line {
+    height: 8.348rem;
+    background-image: url(images/bg_line.png);
+    background-position: center
+}
+
+.line-custom {
+    height: 8rem;
+    background-image: url(images/footer_bg.png);
+    background-position: center
+}
+
+.about {
+    background-image: url(images/about_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 2rem;
+    padding-bottom: 11.6rem;
+    background-color: #000
+}
+
+.about .about-header {
+    position: relative
+}
+
+.about .about-header .btn-header {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -75%)
+}
+
+.about .about-content {
+    padding-top: 11.6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 6.7rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center
+}
+
+.about .about-content .about-content-left {
+    position: relative
+}
+
+.about .about-content .about-content-left .video-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 0 auto
+}
+
+.about .about-content .about-content-left .video-container::after {
+    padding-top: 56.25%;
+    display: block;
+    content: ""
+}
+
+.about .about-content .about-content-left .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.about .about-content .about-content-left .btn-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.about .about-content .about-content-left .gold-box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(20%, 5%)
+}
+
+.about .about-content .about-content-right p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Averta Std CY;
+    text-align: justify;
+    margin-bottom: 2rem;
+    line-height: 24px
+}
+
+.about .about-content .about-content-right span {
+    color: #ffc700;
+    font-weight: 700
+}
+
+.about .about-content .about-content-right .btn-play-game {
+    width: 24rem;
+    height: 5.984rem;
+    color: #553218;
+    background-image: url(images/play_game_btn.png);
+    margin: 0 auto;
+    margin-top: .5rem;
+    font-size: 1.6rem
+}
+
+.game-story {
+    background-image: url("images/game_story_bg.png"), linear-gradient(to bottom, #978b74, rgba(0, 0, 0, 0));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 2rem;
+    padding-bottom: 11.3rem;
+    padding-top: 11.3rem
+}
+
+.game-story .game-story-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative
+}
+
+.game-story .game-story-content .slick-list {
+    pointer-events: none
+}
+
+.game-story .game-story-content .frame-mobile {
+    display: none
+}
+
+.game-story .game-story-content .btn-header {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -36%)
+}
+
+.game-story .game-story-content .story-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -45%);
+    max-width: 60rem
+}
+
+.game-story .game-story-content .armor {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateX(16%)
+}
+
+.game-story .game-story-content .img-group {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.game-story .game-story-content .img-group img:first-child {
+    transform: translate(-16%, 45%);
+    position: relative;
+    z-index: 53;
+    -webkit-animation: float 4s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite
+}
+
+.game-story .game-story-content .img-group img:last-child {
+    transform: translate(-16%, -30%);
+    position: relative;
+    z-index: 51;
+    -webkit-animation: float1 4s ease-in-out infinite;
+    animation: float1 4s ease-in-out infinite
+}
+
+.game-story .story {
+    padding: 4.5rem
+}
+
+.game-story .story p {
+    font-size: 1.6rem;
+    color: #000;
+    font-family: Averta Std CY;
+    text-align: justify;
+    line-height: 2.4rem;
+    margin-bottom: 1.5rem
+}
+
+.hero-group .slick-slide {
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out
+}
+
+.hero-group .slick-center {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
+}
+
+.hero-group .slick-center img {
+    filter: unset !important
+}
+
+.charactor {
+    background-image: url("images/charactor_bg.png"), linear-gradient(to top, black, rgba(255, 255, 255, 0));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 2rem;
+    padding-bottom: 11.3rem;
+    padding-top: 11.3rem
+}
+
+.charactor .charactor-container {
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+.charactor .charactor-header p {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-family: Averta Std CY;
+    text-align: center;
+    max-width: 70rem;
+    margin: 0 auto
+}
+
+.charactor .charactor-header button {
+    transform: translateY(-20%)
+}
+
+.charactor .charactor-content {
+    padding-top: 5rem
+}
+
+.charactor .charactor-content .hero-group .hero {
+    padding: 5rem
+}
+
+.charactor .charactor-content .hero-group .hero img {
+    width: 100%;
+    height: auto;
+    filter: blur(1.3px)
+}
+
+.charactor .charactor-content .hero-intro {
+    padding: 7rem 9.1rem 4rem;
+    border: 2px solid #edd68c;
+    border-radius: 20px;
+    margin-top: 8rem;
+    background: #151515;
+    position: relative;
+    pointer-events: none
+}
+
+.charactor .charactor-content .hero-intro .hero-btn {
+    background-image: url(images/hero-btn.png);
+    width: 36rem;
+    height: 9.8rem;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: #553218;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -4.5rem)
+}
+
+.charactor .charactor-content .hero-intro .hero-btn span {
+    transform: translateY(-1rem)
+}
+
+.charactor .charactor-content .hero-intro .hero-intro-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5.1rem
+}
+
+.charactor .charactor-content .hero-intro .hero-intro-left {
+    display: flex;
+    align-self: flex-end
+}
+
+.charactor .charactor-content .hero-intro .hero-intro-left .skill-box {
+    margin-right: 3rem;
+    padding: 1rem
+}
+
+.charactor .charactor-content .hero-intro .hero-intro-left .skill-box:last-child {
+    margin-right: 0
+}
+
+.charactor .charactor-content .hero-intro .hero-intro-right p {
+    text-align: justify;
+    font-family: Averta Std CY;
+    text-align: justify;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: #fff
+}
+
+.charactor .weapon {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 6rem
+}
+
+.charactor .weapon .weapon-content {
+    display: grid;
+    grid-gap: 8.6rem;
+    grid-template-columns: 25% auto;
+    margin-top: 4rem
+}
+
+.charactor .weapon .weapon-content-left {
+    display: flex;
+    align-items: center
+}
+
+.charactor .weapon .weapon-content-left p {
+    text-align: justify;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-family: Averta Std CY
+}
+
+.charactor .weapon .weapon-content-right .slick-list {
+    padding-top: 2.5rem !important
+}
+
+.charactor .weapon .weapon-content-right .weapon-box img {
+    margin: 0 auto;
+    transform: translatey(0px);
+    -webkit-animation: weaponfloat 4s ease-in-out infinite;
+    animation: weaponfloat 4s ease-in-out infinite
+}
+
+.charactor .weapon .weapon-content-right .btn-buy-now {
+    background-image: url(images/btn_buy_now.png);
+    color: #553218;
+    font-size: 1.4rem;
+    width: 16rem;
+    height: 3.989rem;
+    margin: 2rem auto
+}
+
+.marketplace {
+    background-image: url(images/marketplace_bg.png);
+    padding: 0 2rem;
+    padding-bottom: 11.6rem;
+    padding-top: 9.8rem
+}
+
+.marketplace .marketplace-header {
+    position: relative
+}
+
+.marketplace .marketplace-header .btn-header {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -23rem)
+}
+
+.marketplace .marketplace-content {
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+.marketplace .marketplace-content .marketplace-items {
+    display: grid;
+    grid-gap: 4.878rem;
+    grid-template-columns: repeat(auto-fit, minmax(21.5rem, 1fr))
+}
+
+.marketplace .marketplace-content .item {
+    width: 19rem;
+    height: 28.5rem;
+    position: relative;
+    background-image: url(images/item_frame.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3rem;
+    margin: 0 auto
+}
+
+.marketplace .marketplace-content .item img {
+    margin: 0 auto;
+    display: block
+}
+
+.marketplace .marketplace-content .item .no {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: 700;
+    color: #ffc700;
+    position: absolute;
+    top: .2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Averta Std CY
+}
+
+.marketplace .marketplace-content .item .item-box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: .5rem
+}
+
+.marketplace .marketplace-content .item .item-box-header h5 {
+    text-align: center;
+    color: #f5f9fc;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Averta Std CY
+}
+
+.marketplace .marketplace-content .item .item-box-header h5 img {
+    margin-right: .5rem;
+    display: block
+}
+
+.marketplace .marketplace-content .item .item-box-header h5.common {
+    color: #783f04
+}
+
+.marketplace .marketplace-content .item .item-box-header h5.uncommon {
+    color: lime
+}
+
+.marketplace .marketplace-content .item .item-box-header h5.rare {
+    color: #1919ca
+}
+
+.marketplace .marketplace-content .item .item-box-header h5.epic {
+    color: #90f
+}
+
+.marketplace .marketplace-content .item .item-box-header h5.legendary {
+    color: #f90
+}
+
+.marketplace .marketplace-content .item .item-box-header h5.mythical {
+    color: red
+}
+
+.marketplace .marketplace-content .item .item-box-header div {
+    display: flex;
+    align-items: center
+}
+
+.marketplace .marketplace-content .item .item-box-header div img {
+    margin-right: .25rem
+}
+
+.marketplace .marketplace-content .item p {
+    font-size: 1.1rem;
+    line-height: 2.4rem;
+    text-align: left;
+    color: #aaa
+}
+
+.marketplace .marketplace-content .item .price {
+    display: flex;
+    align-items: center;
+    font-family: Averta Std CY
+}
+
+.marketplace .marketplace-content .item .price img {
+    margin: 0;
+    margin-right: .5rem
+}
+
+.marketplace .marketplace-content .item .price span {
+    font-size: 1.4rem;
+    color: #ffc700
+}
+
+.marketplace .marketplace-content .item .price span:last-child {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700
+}
+
+.marketplace .btn-expoler {
+    background-image: url(images/btn_buy_now.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24rem;
+    height: 6rem;
+    color: #553218;
+    font-size: 1.6rem;
+    margin: 5rem auto;
+    margin-bottom: 0
+}
+
+.feature {
+    padding: 7rem 2rem;
+    background-image: url(images/feature_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.feature .feature-container {
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+.feature .feature-header p {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem
+}
+
+.feature .feature-box {
+    max-width: 21.231rem;
+    margin: 0 auto
+}
+
+.feature .feature-box .feature-box-img {
+    background-image: url(images/feature_box_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 36rem;
+    padding-top: 6rem
+}
+
+.feature .feature-box p {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: center
+}
+
+.feature .feature-box h5 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #ffc700;
+    text-align: center;
+    line-height: 3rem
+}
+
+.feature .feature-box img {
+    margin: 1.8rem auto
+}
+
+.feature .token-metric {
+    position: relative;
+    margin-top: 5rem;
+    background: url(images/token_metric_bg.png) no-repeat bottom center
+}
+
+.feature .token-metric .pc-hide {
+    display: none
+}
+
+.feature .token-metric .title {
+    font-size: 3rem;
+    line-height: 3rem
+}
+
+.feature .token-metric .token-metric-content {
+    max-width: 960px;
+    min-width: 960px;
+    margin: 0 auto;
+    background-image: url(images/token_metric.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    padding: 17.5rem 0
+}
+
+.feature .token-metric .token-metric-left,
+.feature .token-metric .token-metric-right {
+    color: #ffc700;
+    width: 40%
+}
+
+.feature .token-metric .token-metric-left div,
+.feature .token-metric .token-metric-right div {
+    padding: 3rem 0
+}
+
+.feature .token-metric .token-metric-left div p,
+.feature .token-metric .token-metric-right div p {
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    color: #fff;
+    font-weight: 700
+}
+
+.feature .token-metric .token-metric-left div p span,
+.feature .token-metric .token-metric-right div p span {
+    font-weight: 400
+}
+
+.feature .token-metric .token-metric-center .title {
+    transform: translate(3.5rem, -3rem)
+}
+
+.roadmap {
+    background-image: url(images/roadmap_bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 2rem;
+    padding-bottom: 11.6rem;
+    padding-top: 6.75rem
+}
+
+.roadmap .roadmap-header {
+    position: relative
+}
+
+.roadmap .roadmap-header .btn-header {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -20rem)
+}
+
+.roadmap .roadmap-header p {
+    text-align: center
+}
+
+.roadmap .roadmap-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5rem
+}
+
+.roadmap .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 3rem auto
+}
+
+.roadmap .timeline::after {
+    content: "";
+    position: absolute;
+    width: .4rem;
+    background-color: #ffb12f;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: .4rem
+}
+
+.roadmap .timeline-container::after {
+    content: url(images/roadmap_point.png);
+    position: absolute;
+    width: 3.6rem;
+    height: 3.562rem;
+    right: -1.65rem;
+    top: 15px;
+    z-index: 1
+}
+
+.roadmap .left {
+    left: 0
+}
+
+.roadmap .right {
+    left: calc(50% + 0.2rem)
+}
+
+.roadmap .right::after {
+    left: -22px
+}
+
+.roadmap .content {
+    position: relative
+}
+
+.roadmap .content>p:first-child {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    color: #ffc700;
+    margin-bottom: .5rem
+}
+
+.roadmap .timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%
+}
+
+.roadmap .timeline .right p {
+    text-align: left
+}
+
+.roadmap .timeline .left p {
+    text-align: right
+}
+
+.roadmap .timeline p {
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 2.4rem
+}
+
+.roadmap .our-team-header {
+    position: relative;
+    margin-top: 6rem
+}
+
+.roadmap .our-team-header img {
+    margin: 0 auto;
+    margin-bottom: 2rem
+}
+
+.roadmap .our-team-header .btn-header {
+    margin: 0 auto;
+    margin-bottom: 2rem
+}
+
+.roadmap .our-team-header p {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2.4rem
+}
+
+.roadmap .our-team {
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-top: 6.5rem;
+    background: rgba(0, 12, 44, .5);
+    border: 2px solid #edd68c;
+    border-radius: 2rem;
+    padding: 0 8.5rem;
+    padding-bottom: 10rem
+}
+
+.roadmap .our-team .our-team-content {
+    margin-top: 5rem
+}
+
+.roadmap .our-team .our-team-content .member-box {
+    width: 20.7rem;
+    margin: 0 auto
+}
+
+.roadmap .our-team .our-team-content .member-img-frame {
+    width: 20.66rem;
+    height: 24.1rem;
+    position: relative
+}
+
+.roadmap .our-team .our-team-content .member-img-frame .frame {
+    position: relative;
+    z-index: 53
+}
+
+.roadmap .our-team .our-team-content .member-img-frame .member-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 51
+}
+
+.roadmap .our-team .our-team-content .member-info {
+    margin-top: 1rem;
+    border-left: 2px solid #4d535f;
+    padding: 0 1.5rem;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 23rem
+}
+
+.roadmap .our-team .our-team-content .member-info p {
+    font-size: 1.4rem;
+    line-height: 2.4rem
+}
+
+.roadmap .our-team .our-team-content .member-info .social {
+    display: flex;
+    margin-top: auto
+}
+
+.roadmap .our-team .our-team-content .member-info .social a {
+    margin-right: 1rem;
+    width: 2.4rem
+}
+
+.roadmap .our-team .our-team-content .member-info p:nth-child(2) {
+    font-size: 1.6rem;
+    color: #ffc700;
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+.roadmap .advisor {
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-top: 6.8rem
+}
+
+.roadmap .advisor .advisor-header {
+    text-align: center
+}
+
+.roadmap .advisor .advisor-header p {
+    margin-top: 2.1rem
+}
+
+.roadmap .advisor .advisor-content {
+    margin-top: 5rem
+}
+
+.roadmap .advisor .advisor-box {
+    width: 16rem;
+    height: 32.5rem;
+    display: flex;
+    flex-direction: column
+}
+
+.roadmap .advisor .advisor-box .advisor-img {
+    position: relative;
+    display: flex;
+    height: 16rem
+}
+
+.roadmap .advisor .advisor-box .advisor-img img:last-child {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 51
+}
+
+.roadmap .advisor .advisor-box .social {
+    display: flex;
+    justify-content: center;
+    margin-top: auto
+}
+
+.roadmap .advisor .advisor-box .social a {
+    margin-right: 1rem;
+    width: 2.4rem
+}
+
+.roadmap .advisor .advisor-info {
+    text-align: center;
+    margin-top: 1rem
+}
+
+.roadmap .advisor .advisor-info p {
+    font-size: 1.4rem;
+    line-height: 2.1rem
+}
+
+.roadmap .advisor .advisor-info p:first-child {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    color: #ffc700
+}
+
+.partner {
+    background-color: #242424;
+    padding: 0 2rem 8rem
+}
+
+.partner .partner-container {
+    max-width: 1170px;
+    margin: 0 auto
+}
+
+.partner .partner-container .partner-header {
+    text-align: center;
+    transform: translateY(-115%);
+    height: 11.5rem
+}
+
+.partner .partner-container .partner-header .btn-header {
+    flex-direction: column
+}
+
+.partner .partner-container .partner-header .btn-header p {
+    font-family: Kid Games, Roboto Slab, serif;
+    font-size: 2rem
+}
+
+.partner .partner-container .partner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.partner .partner-container .partner-content img {
+    margin: 3rem
+}
+
+footer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -99;
+    background-image: url(images/footer_bg.png);
+    opacity: .33
+}
+
+footer {
+    position: relative;
+    padding: 8rem 2rem
+}
+
+footer .footer-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 20% 15% 15% 15%;
+    grid-gap: 2rem
+}
+
+footer .footer-container img {
+    margin-right: 12.5rem
+}
+
+footer .footer-container .footer-item .title {
+    color: #ffc700;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.4rem
+}
+
+footer .footer-container .footer-item p,
+footer .footer-container .footer-item li,
+footer .footer-container .footer-item a {
+    font-size: 1.4rem;
+    color: #fff;
+    font-family: Averta Std CY;
+    line-height: 2.4rem
+}
+
+footer .footer-container .footer-item .social-lst {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
+}
+
+footer .footer-container .footer-item .social-lst a {
+    display: inline-block;
+    margin-right: 1rem;
+    max-width: 33px
+}
+
+footer .footer-container .footer-item .social-lst a:first-child {
+    max-width: 44px
+}
+
+.marketplace-slider .slick-list .slick-slide {
+    padding: 0 50px
+}
+
+.story-slider .slick-dots,
+.teams-slider .slick-dots,
+.advisor-content .slick-dots {
+    display: flex;
+    justify-content: center
+}
+
+.story-slider .slick-dots li,
+.teams-slider .slick-dots li,
+.advisor-content .slick-dots li {
+    margin-right: 1.7rem
+}
+
+.story-slider .slick-dots li button,
+.teams-slider .slick-dots li button,
+.advisor-content .slick-dots li button {
+    font-size: 0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: .2rem;
+    transform: rotate(45deg);
+    border: none;
+    cursor: pointer;
+    background-color: #fff
+}
+
+.story-slider .slick-dots li.slick-active button,
+.teams-slider .slick-dots li.slick-active button,
+.advisor-content .slick-dots li.slick-active button {
+    background-color: #ffa941
+}
+
+.teams-slider .slick-dots {
+    transform: translateY(4rem)
+}
+
+.slick-slide {
+    outline: none !important
+}
+
+.slick-prev {
+    left: -2.5rem;
+    z-index: 999
+}
+
+.slick-next {
+    right: -2.5rem;
+    z-index: 999
+}
+
+.feature-content-slider .slick-prev,
+.feature-content-slider .slick-next {
+    top: 30%
+}
+
+.advisor-slider .slick-prev,
+.advisor-slider .slick-next {
+    top: 30%
+}
+
+.advisor-slider .slick-slide {
+    display: flex !important;
+    justify-content: center
+}
+
+.marketplace-slider .slick-slide>div {
+    padding-top: 2rem;
+    padding-bottom: 1rem
+}
+
+.marketplace .slick-slide>div:first-child {
+    padding-top: 0
+}
+
+.marketplace .slick-slide>div:last-child {
+    padding-bottom: 0
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: 0 0
+}
+
+.slick-prev:before {
+    content: url(images/prev.png)
+}
+
+.slick-next:before {
+    content: url(images/next.png)
+}
+
+@-webkit-keyframes weaponfloat {
+    0% {
+        transform: translatey(0px)
+    }
+
+    50% {
+        transform: translatey(-30px)
+    }
+
+    100% {
+        transform: translatey(0px)
+    }
+}
+
+@keyframes weaponfloat {
+    0% {
+        transform: translatey(0px)
+    }
+
+    50% {
+        transform: translatey(-30px)
+    }
+
+    100% {
+        transform: translatey(0px)
+    }
+}
+
+@-webkit-keyframes float {
+    0% {
+        transform: translate(-16%, 30%)
+    }
+
+    50% {
+        transform: translate(-16%, 20%)
+    }
+
+    100% {
+        transform: translate(-16%, 30%)
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translate(-16%, 30%)
+    }
+
+    50% {
+        transform: translate(-16%, 20%)
+    }
+
+    100% {
+        transform: translate(-16%, 30%)
+    }
+}
+
+@-webkit-keyframes float1 {
+    0% {
+        transform: translate(-16%, -30%)
+    }
+
+    50% {
+        transform: translate(-16%, -45%)
+    }
+
+    100% {
+        transform: translate(-16%, -30%)
+    }
+}
+
+@keyframes float1 {
+    0% {
+        transform: translate(-16%, -30%)
+    }
+
+    50% {
+        transform: translate(-16%, -45%)
+    }
+
+    100% {
+        transform: translate(-16%, -30%)
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .4)
+}
+
+.modal-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: .4s;
+    animation-name: animatetop;
+    animation-duration: .4s;
+    background-color: #222;
+    border-radius: 1rem
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: 700
+}
+
+.close:hover,
+.close:focus {
+    color: #c0c5b4;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.modal-header {
+    color: #fff;
+    padding: 2rem 4rem 4rem;
+    position: relative
+}
+
+.modal-header .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem
+}
+
+.modal-body {
+    padding: 0 4rem
+}
+
+.modal-body p {
+    text-align: center;
+    margin-bottom: 2rem
+}
+
+.modal-footer {
+    color: #fff;
+    padding: 1.5rem 4rem 4rem
+}
+
+.modal-footer .jointelegram {
+    text-transform: uppercase;
+    color: #000;
+    display: block;
+    width: 15rem;
+    height: 4.8rem;
+    border-radius: .4rem;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #ffc700
+}
